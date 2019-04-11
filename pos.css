@@ -1,60 +1,80 @@
-*{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-html, body{
-	height: 200%;
-	width:  100%;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 100%;
-
+html, body {
+  height: 200%;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
 }
 
-h1{
-	margin: 1rem 0;
+h1 {
+  margin: 1rem 0;
 }
 
-section{
-	background: lightgrey;
-	border-bottom: 1px solid #000;
-	min-height: 600px;
-	margin-top: 2rem;
-
+section {
+  position: relative;
+  background: lightgrey;
+  border-bottom: 1px solid #000;
+  min-height: 600px;
+  margin-top: 2rem;
 }
 
-.wrapper{
-	max-width: 600px;
-	margin: auto;
-
+section:hover .electric-purple{
+	left:100%;
+	border-radius: 50%;
+	background:yellow;
+	margin-left: 10px;
 }
 
-.row{
-	width: 100%;
+section .electric-purple{
+	transition: 1s all ease;}
 
+.wrapper {
+  max-width: 600px;
+  margin: auto;
 }
 
-.col{
-	width: 200px;
-	height: 200px;
+.row {
+  width: 100%;
 }
 
-.electric-purple{
-	background: #C200FB;
-
+.col {
+  width: 200px;
+  height: 200px;
 }
 
-.raspberry{
-	background: #EC0868;
-	
+.electric-purple {
+  background: #C200FB;
+  position: absolute;
+	top:50%;
+	left:50%;
+	margin-left: -100px;
+	margin-top: -100px;
+  z-index: 0;
 }
 
-.ferrari-red{
-	background: #FC2F00;
-	
-
+.raspberry {
+  background: #EC0868;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  ;
 }
 
-.black{
-	background: #000;
+.ferrari-red {
+  background: #FC2F00;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
+.black {
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
